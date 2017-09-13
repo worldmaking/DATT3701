@@ -321,9 +321,7 @@ In Flower, the player controls the wind, blowing a flower petal through the air 
 
 **Journey**
 
-<div class="youtube" data-embed="Nnxk-USQyfQ"></div>
-
-<iframe width="640" height="360" src="https://www.youtube.com/embed/i_KrjxD8djo?rel=0" frameborder="0" allowfullscreen></iframe>
+<div class="youtube" data-embed="i_KrjxD8djo"></div>
 
 In Journey, the player controls a robed figure in a vast desert, traveling towards a mountain in the distance. Other players on the same journey can be discovered, and two players can meet and assist each other, but they cannot communicate via speech or text and cannot see each other's names. The robed figure wears a trailing scarf, which when charged by approaching floating pieces of cloth, briefly allows the player to float through the air. The developers sought to evoke in the player a sense of smallness and wonder, and to forge an emotional connection between them and the anonymous players they meet along the way. - [wiki](https://en.wikipedia.org/wiki/Journey_(2012_video_game))
 
@@ -397,11 +395,9 @@ Narrated by Davey Wreden, it takes the user through a number of incomplete and a
 
 ### Noby Noby Boy
 
-<div class="youtube" data-embed="Nnxk-vlMhthzbL1I"></div>
+<div class="youtube" data-embed="d7tisMyOMhk"></div>
 
 [Noby noby boy](https://en.wikipedia.org/wiki/Noby_Noby_Boy)
-
-
 
 </script>
 <div class="container">
@@ -415,33 +411,20 @@ Narrated by Davey Wreden, it takes the user through a number of incomplete and a
 var body = document.getElementById('sourcetext').innerText;
 document.getElementById('main_body').innerHTML = marked(body);
 
-var youtube = document.querySelectorAll( ".youtube" );
-for (var i = 0; i < youtube.length; i++) {
-	var id = youtube[i].dataset.embed;
-	var source = "https://img.youtube.com/vi/"+ id +"/sddefault.jpg"; 
-    console.log(i, source);
-    
-    // Load the image asynchronously
+function addyoutube(element, id) {
+	// Load the image asynchronously
     var image = new Image();
-	image.src = source;
-	image.addEventListener( "load", function() 
-	{
-		youtube[i].appendChild(image);
-	}(i));
+	image.src = "https://img.youtube.com/vi/"+ id +"/0.jpg";
+	image.addEventListener( "load", function() { element.appendChild(image); }(i));
 	
    	// click to play
-    youtube[i].addEventListener( "click", function() 
-    {
-    	var iframe = document.createElement( "iframe" );
-		iframe.setAttribute( "frameborder", "0" );
-		iframe.setAttribute( "width", "640" );
-		iframe.setAttribute( "height", "480" );
-		iframe.setAttribute( "allowfullscreen", "true" );
-		iframe.setAttribute( "src", "https://www.youtube.com/embed/"+ id +"?rel=0&showinfo=0&autoplay=1" );
-		this.innerHTML = "";
-		this.appendChild(iframe);
+    element.addEventListener( "click", function() {
+    	this.innerHTML = '<iframe width="640" height="360" src="https://www.youtube.com/embed/'+id+'?rel=0" frameborder="0" allowfullscreen></iframe>';
     });
 }
+
+var youtube = document.querySelectorAll( ".youtube" );
+for (var i = 0; i < youtube.length; i++) addyoutube(youtube[i], youtube[i].dataset.embed);
 
 </script>
 </body>
