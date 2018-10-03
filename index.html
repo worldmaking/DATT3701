@@ -51,7 +51,7 @@ Additional resource locations:
 - [Alice lab, GCFA309](https://worldmaking.github.io), with VR and motion tracking systems. 
 - AMPD's Motion Media Lab at [Cinespace Film Studios](https://cinespace.com), with an [Organic Motion markerless motion capture](https://www.organicmotion.com). 
 
-## Organization of the Course 
+### Organization of the Course 
 
 The first part of the course focuses on ideation toward proposal development, including rapid pitching, peer reviews, thematic lectures, tutorials, individual research and experimentation, establishing groups, critique and discussion, collaborative sketching, design document development, project management, alpha development, and internal and external review. We expect to approve two or three projects for production, by groups of between three and six members each. 
 
@@ -61,7 +61,7 @@ Beside group work, throughout the project production you will be asked to mainta
 
 Throughout the course, as instructors we will act primarily in two roles. First, along with external partners, we will act as the clients, perhaps akin to publishers or curators, of the projects: we issue the call, we articulate the requirements, and will play the principal role in selecting and refining the proposals and their subsequent production. Second, we will act as pedagogical and technical support: we will lead several guided tutorial sessions in the likely software platforms for projects, followed by focused lab critique and guidance as the projects develop. We will also introduce and are happy to support mainstream gaming engines including Unreal and Unity, as well as less conventional platforms. Over the first semester we will also lead tutorials in key areas to support this year's call for work, such as Unity, VR, gamification, data analysis, machine learning, etc.
 
-## Evaluation
+### Evaluation
 
 The final grade for the course will be based on the following items weighted as indicated:
 
@@ -84,14 +84,11 @@ The final grade for the course will be based on the following items weighted as 
 
 -----
 
-## 2018-2019: Making games for health (practice, research, and disability inclusivity)
+## 2018-2019 Theme: Games for health (practice, research, and disability inclusivity)
 
 We seek proposals for three new works in the area of video games, to be developed to a fully-realized play-tested state suitable for its presentation in a public venue, and dissemination online.
 
-In this year's course the call for work is rooted in a theme of using game design & mechanics toward mental and physiological health/wellbeing as well as inclusivity for disabilities, paired with contemporary digital technologies that may include for example data science, machine learning, and VR. You will be asked to create a game/an app/a gamification project, which will be designed specifically to meet specific needs of players with disabilities, physiological or mental health issues. For example:
-
-- A game controller design for players with hearing issues
-- A VR game designed for people suffering from mobility issues
+In this year's course the call for work is rooted in a theme of using game design & mechanics toward mental and physiological health/wellbeing as well as inclusivity for disabilities, paired with contemporary digital technologies that may include for example data science, machine learning, and VR. You will be asked to create a game/an app/a gamification project, which will be designed specifically to meet specific needs of players with disabilities, physiological or mental health issues. 
 
 This year we are fortunate to have connected with three external partners working with us in the class; thus we will have three teams, each producing a project in collaboration with one of these partners:
 
@@ -99,6 +96,9 @@ This year we are fortunate to have connected with three external partners workin
 - Ocutherapy (VR for rehabilitation)
 - Lindsey Fraser, York (psychology of body illusion research)
 
+Each partner will support or coordinate one of the game projects, and join to some of our meetings.
+
+-----
 
 ## Schedule
 
@@ -142,7 +142,7 @@ General Questions to ask yourself:
 
 
 
-### Ocutherapy.com
+#### Ocutherapy.com
 
 This year we are very fortunate to have with us Alex Theodorou, managing director of  [Ocutherapy.com](http://ocutherapy.com):
 
@@ -167,7 +167,7 @@ Key deliverables:
 -       Creating narrative-guided gameplay is a bonus
 
 
-### Rationale: gamification for health and wellbeing
+#### Rationale: gamification for health and wellbeing
 
 Gamification involves applying game design techniques, game mechanics, and/or game style to non-game applications to solve problems and engage audiences. Game play focuses and controls our attention, taps into our innate strengths, thrills us utterly, and compels us to greater resilience in the attainment of more powerful and effective skills. That’s why many believe it is perfect for behavior change in healthcare. 
 
@@ -395,7 +395,7 @@ Post-mortem
 
 ----
 
-### Manifesto for a ludic century (Erik Zimmerman)
+##### Manifesto for a ludic century (Erik Zimmerman)
 
 Erik Zimmerman's article [on Kotaku](https://kotaku.com/manifesto-the-21st-century-will-be-defined-by-games-1275355204), formed as a manifesto, argues for games as the defining medium of the current century:
 
@@ -422,6 +422,8 @@ renderer.heading = function(text, level) {
 	var slug = text.toLowerCase().replace(/[^\w]+/g, '-');
 	if (level == 2) {
 		toc.push("- [" + text + "](#"+slug+")");
+	} else if (level == 3) {
+		toc.push("  - [" + text + "](#"+slug+")");
 	}
 	return "<h" + level + " id=\"" + slug + "\"><a href=\"#" + slug + "\" class=\"anchor\"></a>" + text + "</h" + level + ">";
 };
